@@ -12,7 +12,7 @@ echo "<img src=OpenShift.png /><p>";
 echo "用户列表: <br>";
 $rs = $connection->query($query);
 while ($row = mysqli_fetch_assoc($rs)) {
-    echo "ID: ".$row['user_id'] . " User Name: " . $row['username'] . "<br>";
+    echo "编号: ".$row['user_id'] . " 用户名: " . $row['username'] . "<br>";
 }
 echo "End of the list <br>";
 
