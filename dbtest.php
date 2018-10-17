@@ -9,7 +9,7 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
 echo "<img src=OpenShift.png /><p>";
-echo "用户列表: <br>";
+echo "Here is the list of users: <br>";
 $rs = $connection->query($query);
 while ($row = mysqli_fetch_assoc($rs)) {
     echo "User Id: ".$row['user_id'] . " User Name: " . $row['username'] . "<br>";
