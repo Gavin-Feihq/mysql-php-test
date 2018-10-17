@@ -9,10 +9,10 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
 echo "<img src=redhat-azure.png /><br>";
-echo "用户列表Here is the list of users: <br>";
+echo "Here is the list of users: <br>";
 $rs = $connection->query($query);
 while ($row = mysqli_fetch_assoc($rs)) {
-    echo "用户Id: ".$row['user_id'] . " 用户名: " . $row['username'] . "<br>";
+    echo "User Id: ".$row['user_id'] . " User Name: " . $row['username'] . "<br>";
 }
 echo "End of the list <br>";
 
